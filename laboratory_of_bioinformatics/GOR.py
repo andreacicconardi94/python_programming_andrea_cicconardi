@@ -98,8 +98,20 @@ if __name__=='__main__':						#Here I slide all the file and sum all the matrice
 				Final_Sec_structure[Y]+=Sec_structure[Y]
 
 	Final_Coil, Final_Strand, Final_Helix, Final_Residue, Final_Sec_structure = Normalization(Final_Coil,Final_Strand,Final_Helix,Final_Residue, R, Final_Sec_structure, ss)
-	print("Coil probability matrix:\n%r" %Final_Coil) 			#Normalize them
-	print("Strand probability matrix:\n%r" %Final_Strand)
-	print("Helix probability matrix:\n%r" %Final_Helix)
-	print("Residue probability matrix:\n%r" %Final_Residue)
-	print("Secondary Structure probability matrix:\n%r" %Final_Sec_structure)
+	MatrixCoil=np.array(Final_Coil)
+	MatrixStrand=np.array(Final_Strand)
+	MatrixHelix=np.array(Final_Helix)
+	MatrixResidue=np.array(Final_Residue)
+	MatrixSecondaryStructure=np.array(Final_Sec_structure)
+
+	np.save("Matrix_Coil_Train_4", MatrixCoil)
+	np.save("Matrix_Strand_Train_4", MatrixStrand)
+	np.save("Matrix_Helix_Train_4", MatrixHelix)
+	np.save("Matrix_Residue_Train_4", MatrixResidue)
+	np.save("Matrix_SS_Train_4", MatrixSecondaryStructure)
+
+	#print("Coil probability matrix:\n%r" %Final_Coil) 			#Normalize them
+	#print("Strand probability matrix:\n%r" %Final_Strand)
+	#print("Helix probability matrix:\n%r" %Final_Helix)
+	#print("Residue probability matrix:\n%r" %Final_Residue)
+	#print("Secondary Structure probability matrix:\n%r" %Final_Sec_structure)
