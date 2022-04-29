@@ -108,7 +108,7 @@ def population_matrix(Matrix, seq):
 	print ("The path is:", pathway [::-1])
 	return (Matrix)
 
-
-Riccardo_Benzoni = population_matrix(Matrix, seq)
-prettymatrix (Riccardo_Benzoni)
+if __name__=='__main__':
+	Viterbi_matrix = population_matrix(Matrix, seq)
+	prettymatrix (Viterbi_matrix)
 
