@@ -3,9 +3,9 @@
 seq1 = "ACTGG"
 seq2 = "ACCA"
 
-print ("Le due sequenze sono queste")
-print (seq1)
-print (seq2)
+print ("The two sequences are:")
+print (seq1, '\n', seq2)
+
 ###############
 ##pretty matrix
 def prettymatrix(M):
@@ -63,9 +63,7 @@ def population_matrix (seq1, seq2, Scoring, Traceback):
 					Traceback[j][i] = path[k]
 	return Scoring, Traceback
 
-population_matrix (seq1, seq2, Scoring, Traceback)
-prettymatrix (Scoring)
-prettymatrix (Traceback)
+
 
 def alignment_function (Scoring, Traceback, seq1, seq2):
 	row = len(seq1)+1
@@ -95,11 +93,14 @@ def alignment_function (Scoring, Traceback, seq1, seq2):
 			alignment2 = alignment2 + seq2[J-1]
 			I = I-1
 			J = J-1
-	print ("Sei contento di questo alignment?")
+	print ("Are you satisfied of this alignment?")
 	print (alignment1[::-1])
 	print (alignment2[::-1])
-	print ("Au visage du pénis")
 	return alignment1, alignment2
 
-alignment_function (Scoring, Traceback, seq1, seq2)
+if __name__=='__main__':
+	population_matrix (seq1, seq2, Scoring, Traceback)
+	prettymatrix (Scoring)
+	prettymatrix (Traceback)
+	alignment_function (Scoring, Traceback, seq1, seq2)
 
