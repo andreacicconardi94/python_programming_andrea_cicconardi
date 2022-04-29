@@ -1,2 +1,2 @@
-# python programming Andrea Cicconardi
-Inside this folder you can find a collection of the script I did during my university careers
+# Python Programming
+This folder contains the first script I implement during my university career. There are algorithm for sequence alignment and mixted exercise
